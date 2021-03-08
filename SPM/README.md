@@ -16,7 +16,9 @@ For all algorithms, the set of flows can be either generated randomly or read fr
 - *Generating flows randomly:* The random generated flows are between random source and destinations. The number of flows can be changed using option `-f`. The traffic rate of each flow is also randomly chosen in a user specified interval and can be changes using options `-l` and `-u`. 
 
 The code generates two auxiliary files in the network folder:
+
 	1. flows: In each line of this file a flow is specified. The first number is the **id** of the flow. The second number is the **traffic rate**. Then, a sequence 	of paired numbers follows. The first number is a **switch id** and the second number is the **port number**. Port numbers are unique locally for each 	switch, starting from `1`.
+	
 	2. switches: In each line of this file a **port** is specified. The first number is the switch name. The second number is the **port number**.The remaining 	numbers are the **flow ids** that pass through that port. 
 
 - *Reading flows from a file:* The flows can be read from a file from **network** directory. Its name can be specified via option `-i`. It should have the same format as the *flows* file, described above. Note, if `-i` is provided the flows are not generated randomly and if not provided the flows are generated randomly. 
